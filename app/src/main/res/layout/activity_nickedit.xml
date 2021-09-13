@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#EAEAEA">
+
+    <LinearLayout
+        android:id="@+id/lly_nickedit"
+        android:background="@color/whitee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_maintv"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임 변경"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_date124"
+            android:textColor="#4C4C4C"
+            android:textSize="14sp"
+            android:text="닉네임은 앱에서 사용되는 사용자의 이름이며 채팅방에서 닉네임이 사용됩니다. 닉네임은 언제든 변경이 가능합니다."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/edge"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:id="@+id/et_editnick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLength="10"
+            android:hint="변경할 닉네임을 입력해 주세요." />
+
+        <Button
+
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#3F0099"
+            android:id="@+id/btn_editnick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/SignUpButton"
+            android:textColor="@color/whitee"
+            android:text="닉네임 변경"/>
+
+    </LinearLayout>
+
+</LinearLayout>

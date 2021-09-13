@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#EAEAEA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                tools:alpha="1">
+
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:background="@color/whitee"
+                    android:id="@+id/zxcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/lly_area"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_widget_background">
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="서울특별시"
+                    android:textColor="@color/gray"
+                    android:id="@+id/et_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbarLayout"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_down"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="▼"
+                            android:textColor="@color/gray"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toEndOf="@+id/et_area"
+                            app:layout_constraintTop_toTopOf="@+id/et_area" />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/lly_sick"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_widget_background">
+                <TextView
+                    android:padding="10dp"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    android:text="감기"
+                    android:id="@+id/et_sick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/tv_down"
+                    app:layout_constraintStart_toEndOf="@+id/tv_down" />
+                <TextView
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:id="@+id/tv_down2"
+                    android:textSize="15sp"
+                    android:text="▼"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/et_area"
+                    app:layout_constraintStart_toEndOf="@+id/et_sick" />
+                </LinearLayout>
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:backgroundTint="#3F0099"
+                    android:textColor="@color/whitee"
+                    android:text="검색"
+                    android:id="@+id/btn_area"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_down2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="20dp"
+                    android:id="@+id/btn_alll"
+                    android:background="@color/whitee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/zxcv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+                <Button
+                    android:textColor="@color/whitee"
+                    android:text="현위치 검색"
+                    android:id="@+id/btn_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/zxcv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/whitee"
+                    android:padding="20dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/fmnv"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_alll">
+
+                    <TextView
+                        android:id="@+id/tv_infodis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_outline_info_24"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="서울특별시 " />
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/aa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_alll"
+                    app:layout_constraintBottom_toTopOf="@+id/abc5454"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/abc5454"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/aa"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/valueTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#2E7D32"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        tools:text="관심" />
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lly_gauge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/gauge4"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/aa"></LinearLayout>
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="행동 지침"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="10dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="top|center"
+                            android:layout_gravity="center"
+                            android:id="@+id/gradeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="0dp"
+                            tools:text="좋음" />
+                        <TextView
+
+                            android:id="@+id/labelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#747474"
+                            android:textSize="12sp"
+                            tools:text="예측진료건수 : "
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/fmnvv"
+                    android:background="@color/whitee"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/fmnv"
+                    android:padding="20dp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_infoair"
+                        android:drawableEnd="@drawable/ic_outline_info_24"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="대기 정보 "
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#4C4C4C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="미세먼지는 감기, 천식, 피부염, 눈병 등 질병에 직간접적으로 영향을 미칩니다. "
+                        android:textSize="13sp"/>
+
+
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_checkplace"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="측정소 : 삼산동"-->
+<!--                        android:textColor="#747474"-->
+<!--                        android:textSize="12sp" />-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lly_backcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_widget_background"
+                        android:backgroundTint="#FAF4C0"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/q1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="40dp"
+                            android:text="서울특별시"
+                            android:textColor="#4C4C4C"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:id="@+id/q2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="측정소는 종로구이며, 서울특별시입니다."
+                            android:textColor="#5D5D5D"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/q1" />
+                        <!--                        <TextView-->
+                        <!--                            android:layout_marginLeft="40dp"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textSize="20sp"-->
+                        <!--                            android:id="@+id/qwer1"-->
+                        <!--                            android:textColor="#353535"-->
+                        <!--                            android:layout_marginTop="20dp"-->
+                        <!--                            android:text="초미세먼지   8 ㎍/㎥"-->
+                        <!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+                        <!--                            app:layout_constraintTop_toBottomOf="@+id/q2"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textColor="#4374D9"-->
+                        <!--                            android:id="@+id/q3"-->
+                        <!--                            android:textSize="20sp"-->
+                        <!--                            android:layout_marginRight="40dp"-->
+                        <!--                            app:layout_constraintRight_toRightOf="parent"-->
+                        <!--                            android:text="좋음"-->
+                        <!--                            app:layout_constraintTop_toTopOf="@+id/qwer1"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content" />-->
+                        <!--                       <TextView-->
+                        <!--                           android:id="@+id/qwer1"-->
+                        <!--                           android:textColor="#5D5D5D"-->
+                        <!--                           android:textSize="15sp"-->
+                        <!--                           android:layout_marginLeft="20dp"-->
+                        <!--                           app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                           android:text="측정소 : 삼산동"-->
+                        <!--                           app:layout_constraintTop_toBottomOf="@+id/q2"-->
+                        <!--                           android:layout_width="wrap_content"-->
+                        <!--                           android:layout_height="wrap_content" />-->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/loding"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/qwerq"
+                            app:layout_constraintTop_toTopOf="@+id/qwer2"
+                            app:layout_constraintBottom_toBottomOf="@+id/qwera"/>
+
+                        <TextView
+                            android:id="@+id/qwer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="40dp"
+                            android:text="미세먼지"
+                            android:textColor="#4C4C4C"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toLeftOf="@+id/qwer3"
+                            app:layout_constraintTop_toBottomOf="@+id/q2" />
+
+                        <TextView
+                            android:id="@+id/qwer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="40dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/q2" />
+
+                        <TextView
+                            android:id="@+id/qwer5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:text="초미세먼지"
+                            android:textColor="#4C4C4C"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toLeftOf="@+id/qwer3"
+                            app:layout_constraintTop_toBottomOf="@+id/qwer2" />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/qwer4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qwer3" />
+
+                        <TextView
+                            android:id="@+id/qwer41"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qwer5" />
+
+                        <TextView
+                            android:id="@+id/qwer51"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:text="아황산가스"
+                            android:textColor="#4C4C4C"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toLeftOf="@+id/qwer3"
+                            app:layout_constraintTop_toBottomOf="@+id/qwer5" />
+
+
+
+                        <TextView
+                            android:id="@+id/qwerq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:text="일산화탄소"
+                            android:textColor="#4C4C4C"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toLeftOf="@+id/qwer3"
+                            app:layout_constraintTop_toBottomOf="@+id/qwer51" />
+
+                        <TextView
+                            android:id="@+id/qwerw"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qwer51" />
+
+                        <TextView
+                            android:id="@+id/qwere"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:text="오존"
+                            android:textColor="#4C4C4C"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toLeftOf="@+id/qwer3"
+                            app:layout_constraintTop_toBottomOf="@+id/qwerq" />
+
+                        <TextView
+                            android:id="@+id/qwerr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qwerw" />
+
+                        <TextView
+                            android:id="@+id/qwera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:text="이산화질소"
+                            android:textColor="#4C4C4C"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toLeftOf="@+id/qwer3"
+                            app:layout_constraintTop_toBottomOf="@+id/qwere" />
+
+                        <TextView
+                            android:id="@+id/qwers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qwere" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+            <LinearLayout
+                android:layout_marginTop="200dp"
+                android:id="@+id/lly_outnet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/errorDescriptionTextView"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="네트워크 연결을 확인해 주세요"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/errorDescriptionTextVieww"
+                    android:textColor="#4C4C4C"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="연결을 확인한 후 재시도를 클릭해주세요."
+                    android:textSize="14sp" />
+                <Button
+                    android:backgroundTint="#3F0099"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/btn_restart"
+                    android:textColor="@color/whitee"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="재시도"/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:id="@+id/cardBg">
+
+    <TextView
+        android:id="@+id/tv_qwer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="zzzzzzz"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:id="@+id/cardBgg">
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="50dp">
+    <ImageView
+        android:background="@drawable/loding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_pick"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="천식"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <TextView
+            android:textSize="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="경미"
+            android:id="@+id/tv_desc"
+            android:layout_below="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#4C4C4C"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="잦은 기침과 재채기를 동반한 미열..."
+            android:id="@+id/tv_level2"
+            android:layout_below="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="#4C4C4C"
+            android:text="9월 02일 08:09"
+            android:id="@+id/tv_date"
+            android:layout_toStartOf="@+id/text_view_priority"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent" />
+
+
+</LinearLayout>
+<View
+android:layout_width="match_parent"
+android:layout_height="1dp"
+android:background="@color/gray_cc"/>
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EAEAEA">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/whitee"
+        android:id="@+id/lly_register"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="계정 만들기"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/edge"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:id="@+id/et_emailedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="이메일을 입력하세요."
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qwerff">
+        </EditText>
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/edge"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:id="@+id/et_passedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="비밀번호를 입력하세요. (6자 이상)"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_emailedit"/>
+
+        <EditText
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edge"
+            android:textSize="15dp"
+            android:id="@+id/et_passedit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="비밀번호 재입력"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_passedit"/>
+        <EditText
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edge"
+            android:textSize="15dp"
+            android:id="@+id/et_createname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="닉네임을 입력하세요."
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_passedit2"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/qwerff"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/lly_register"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용약관 동의 (필수)"
+                android:id="@+id/cb_rulecheck"
+                android:buttonTint="#5B58A5"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내용보기"
+                />
+        </LinearLayout>
+        <Button
+
+            android:enabled="false"
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tgb"
+            android:textColor="@color/whitee"
+            android:text="회원가입"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/whitee"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/qwerff"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#3F0099"
+            android:id="@+id/btn_movelogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/SignUpButton"
+            android:textColor="@color/whitee"
+            android:text="이메일 로그인"/>
+        <Button
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/black"
+            android:id="@+id/btn_movegoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whitee"
+            android:text="구글 로그인"/>
+
+    </LinearLayout>
+    <WebView
+        android:visibility="invisible"
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

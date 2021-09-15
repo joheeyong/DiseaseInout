@@ -34,10 +34,9 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".InfomationActivity" />
         <activity android:name=".InfofluActivity" />
-        <activity
-            android:name=".FullvideoActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".FullvideoActivity"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".CreateNoteActivity" />
         <activity android:name=".NickEditActivity"/>
     </application>

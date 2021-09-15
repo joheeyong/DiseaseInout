@@ -47,7 +47,7 @@
     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
-                        android:background="@color/whitee"
+                        android:background="@color/white"
                         android:id="@+id/lly_before1"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
@@ -202,7 +202,7 @@
 
 
     <LinearLayout
-        android:background="@color/whitee"
+        android:background="@color/white"
         android:id="@+id/lly_before4"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -213,7 +213,7 @@
 
         <LinearLayout
             android:layout_marginBottom="20dp"
-            android:background="@color/whitee"
+            android:background="@color/white"
             android:id="@+id/lly_before2"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -364,7 +364,7 @@
         android:id="@+id/lly_before3"
         android:layout_marginTop="10dp"
         android:padding="20dp"
-        android:background="@color/whitee"
+        android:background="@color/white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -453,7 +453,7 @@
             android:backgroundTint="#3F0099"
             android:layout_marginTop="20dp"
             android:id="@+id/btn_restart"
-            android:textColor="@color/whitee"
+            android:textColor="@color/white"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_width="wrap_content"

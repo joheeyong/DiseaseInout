@@ -7,7 +7,7 @@
     android:background="#EAEAEA">
 
     <LinearLayout
-        android:background="@color/whitee"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="25dp"
@@ -27,9 +27,7 @@
             android:textSize="14sp"
             android:text="이메일은 계정 로그인에 사용됩니다. 서비스 이용과정에서 등록된 계정 이메일은 직접 삭제하거나 변경할 수 없습니다."
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
+            android:layout_height="wrap_content" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="15dp"
@@ -47,7 +45,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
                 android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
@@ -55,7 +52,7 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="20dp"
                 android:gravity="right"
-                android:textColor="@color/purple_200"
+                android:textColor="@color/purple"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/tv_repasdss"
@@ -73,7 +70,5 @@
                 app:layout_constraintRight_toRightOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </LinearLayout>
-
 </LinearLayout>

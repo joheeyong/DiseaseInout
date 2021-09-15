@@ -7,7 +7,6 @@
     android:fitsSystemWindows="true"
     android:background="#EAEAEA">
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -15,7 +14,7 @@
 
                     <LinearLayout
                         android:padding="20dp"
-                        android:background="@color/whitee"
+                        android:background="@color/white"
                         android:id="@+id/zxcv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -68,7 +67,7 @@
 
                     <LinearLayout
                         android:visibility="invisible"
-                        android:background="@color/whitee"
+                        android:background="@color/white"
                         android:padding="20dp"
                         android:layout_marginTop="10dp"
                         android:id="@+id/lly_infodis1"
@@ -114,7 +113,7 @@
                         android:id="@+id/lly_infodis2"
                         android:layout_marginTop="10dp"
                         android:padding="20dp"
-                        android:background="@color/whitee"
+                        android:background="@color/white"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -153,7 +152,7 @@
                     <LinearLayout
                         android:id="@+id/lly_infodis3"
                         android:visibility="invisible"
-                        android:background="@color/whitee"
+                        android:background="@color/white"
                         android:layout_marginTop="10dp"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
@@ -219,17 +218,13 @@
                 android:backgroundTint="#3F0099"
                 android:layout_marginTop="20dp"
                 android:id="@+id/btn_restart"
-                android:textColor="@color/whitee"
+                android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="재시도"/>
-
         </LinearLayout>
     </LinearLayout>
-
-
-
 
 </ScrollView>

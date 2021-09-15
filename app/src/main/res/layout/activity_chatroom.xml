@@ -14,15 +14,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/messageEditTextt" />
     <LinearLayout
-        android:background="@color/whitee"
+        android:background="@color/white"
         android:id="@+id/messageEditTextt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sendButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
-
+        app:layout_constraintBottom_toBottomOf="parent">
     <EditText
         android:id="@+id/messageEditText"
         android:layout_width="match_parent"
@@ -35,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#5B58A5"
-        android:textColor="@color/whitee"
+        android:textColor="@color/white"
         android:text="전송"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

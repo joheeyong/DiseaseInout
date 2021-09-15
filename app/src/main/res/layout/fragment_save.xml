@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAEAEA">
+    android:background="#F6F6F6">
 
     <LinearLayout
-        android:background="@color/white"
-        android:id="@+id/tgb"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
         android:paddingTop="20dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/lly_toptext"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btn_createe">
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-            android:id="@+id/tv_test"
-            android:textStyle="bold"
+            android:id="@+id/tv_test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="질병 저장"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:gravity="top|center"
+            android:layout_gravity="center"
+            android:id="@+id/tv_test2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="질병명"
-            android:textColor="@color/black"
-            android:textSize="18dp"/>
+            android:textSize="15sp"
+            android:layout_marginBottom="0dp"
+            android:text="우려되거나 앓는 질병의 경과를 기록해보세요." />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:id="@+id/lly_toptextx"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/lly_toptext">
 
         <RadioGroup
-            android:layout_marginTop="10dp"
-            android:id="@+id/radioGroup"
+            android:id="@+id/rg_radiogroup"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             app:layout_constraintTop_toTopOf="parent">
+
             <RadioButton
                 android:id="@+id/rg_Transport"
                 android:layout_width="0dp"
@@ -42,6 +66,7 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:drawableTop="@drawable/radio_button_cough" />
+
             <RadioButton
                 android:id="@+id/rg_lodgment"
                 android:layout_width="0dp"
@@ -51,6 +76,7 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:drawableTop="@drawable/radio_button_eye" />
+
             <RadioButton
                 android:layout_marginTop="10dp"
                 android:drawableTop="@drawable/radio_button_poison"
@@ -87,8 +113,8 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical" />
-        </RadioGroup>
 
+        </RadioGroup>
         <LinearLayout
             android:id="@+id/lly_tvlist"
             android:orientation="horizontal"
@@ -103,6 +129,7 @@
                 android:layout_height="30dp"
                 android:text="감기"
                 android:textColor="#505050"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="20dp"
@@ -111,6 +138,7 @@
                 android:text="눈병"
                 android:textColor="#505050"
                 android:textSize="13dp" />
+
             <TextView
                 android:gravity="center"
                 android:textSize="13dp"
@@ -143,130 +171,72 @@
                 android:layout_height="30dp"
                 android:text="기타"
                 android:textColor="#505050"/>
+
+
         </LinearLayout>
-
-        <View
-            android:id="@+id/vw_one"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/lly_tvlist"/>
-        <TextView
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="질병 상태"
-            android:textColor="@color/black"
-            android:textSize="18dp"/>
-
-        <LinearLayout
-            android:paddingTop="10dp"
-            android:background="@color/white"
-            android:id="@+id/zxcv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:id="@+id/lly_leveldia"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_widget_background">
-                <TextView
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:textColor="@color/gray"
-                    android:textSize="15sp"
-                    android:text="매우 좋음"
-                    android:id="@+id/et_level"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:layout_constraintTop_toTopOf="@+id/tv_down"
-                    app:layout_constraintStart_toEndOf="@+id/tv_down" />
-                <TextView
-                    android:id="@+id/tv_downn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:padding="10dp"
-                    android:text="▼"
-                    android:textColor="@color/gray"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/et_area"
-                    app:layout_constraintTop_toTopOf="@+id/et_area" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <EditText
-            android:maxLength="30"
-            android:padding="10dp"
-            android:background="@drawable/edge"
-            android:layout_marginTop="15dp"
-            android:textSize="15dp"
-            android:id="@+id/et_level2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="간단 증상을 입력해주세요."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailEditText"/>
-        <TextView
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="질병 세부 증상"
-            android:textColor="@color/black"
-            android:textSize="18dp"/>
-        <EditText
-            android:maxLength="500"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:background="@drawable/edge"
-            android:textSize="15dp"
-            android:id="@+id/et_level3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="top"
-            android:ems="10"
-            android:hint="세부 증상 및 정보 등을 입력해주세요."/>
-
-        <LinearLayout
-            android:padding="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </LinearLayout>
-
     </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/rv_note"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly_toptextx"
+        tools:listitem="@layout/noted_item_layout" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#5B58A5"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="새 저장 만들기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/white" />
 
     <LinearLayout
-        android:background="@color/white"
-        android:id="@+id/btn_createe"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/lly_outnet"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" >
-        <Button
-            android:id="@+id/btn_create"
-            android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="저장"
-            android:textAllCaps="false"
+            android:text="네트워크 연결을 확인해 주세요"
+            android:textSize="16sp" />
+        <TextView
+            android:textColor="#4C4C4C"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연결을 확인한 후 재시도를 클릭해주세요."
+            android:textSize="14sp" />
+        <Button
+            android:backgroundTint="#3F0099"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_restart"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="20dp"/>
-    </LinearLayout>
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="재시도"/>
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

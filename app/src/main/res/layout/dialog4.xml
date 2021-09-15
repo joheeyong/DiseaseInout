@@ -23,6 +23,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="탈퇴 시 개인정보는 삭제되며 복구할 수 없습니다." />
-
     </LinearLayout>
+
 </LinearLayout>

@@ -17,7 +17,6 @@
         android:textAlignment="center"
         android:textSize="15sp"
         android:textStyle="bold" />
-
     <TextView
         android:padding="5dp"
         android:textSize="13sp"
@@ -30,9 +29,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/dialogcol"/>
-
-
-
     <TextView
         android:textSize="13sp"
         android:layout_marginTop="10dp"
@@ -41,4 +37,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="출처 : 국민건강보험공단"/>
+
 </LinearLayout>

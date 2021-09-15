@@ -38,7 +38,7 @@
                 <LinearLayout
                     android:paddingTop="5dp"
                     android:paddingLeft="20dp"
-                    android:background="@color/whitee"
+                    android:background="@color/white"
                     android:id="@+id/zxcv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                 <Button
                     android:layout_marginLeft="20dp"
                     android:backgroundTint="#3F0099"
-                    android:textColor="@color/whitee"
+                    android:textColor="@color/white"
                     android:text="검색"
                     android:id="@+id/btn_area"
                     android:layout_width="0dp"
@@ -128,14 +128,14 @@
                 <LinearLayout
                     android:padding="20dp"
                     android:id="@+id/btn_alll"
-                    android:background="@color/whitee"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/zxcv"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
                 <Button
-                    android:textColor="@color/whitee"
+                    android:textColor="@color/white"
                     android:text="현위치 검색"
                     android:id="@+id/btn_all"
                     android:layout_width="match_parent"
@@ -146,7 +146,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:background="@color/whitee"
+                    android:background="@color/white"
                     android:padding="20dp"
                     android:layout_marginTop="10dp"
                     android:id="@+id/fmnv"
@@ -237,7 +237,7 @@
                             android:id="@+id/gradeTextView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="15sp"
                             android:layout_marginBottom="0dp"
                             tools:text="좋음" />
@@ -256,7 +256,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/fmnvv"
-                    android:background="@color/whitee"
+                    android:background="@color/white"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -523,6 +523,47 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
+                    <LinearLayout
+                        android:id="@+id/lly_outnet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="200dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/errorDescriptionTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="네트워크 연결을 확인해 주세요"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/errorDescriptionTextVieww"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="연결을 확인한 후 재시도를 클릭해주세요."
+                            android:textColor="#4C4C4C"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btn_restart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:backgroundTint="#3F0099"
+                            android:gravity="center"
+                            android:text="재시도"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -531,44 +572,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
-            <LinearLayout
-                android:layout_marginTop="200dp"
-                android:id="@+id/lly_outnet"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/errorDescriptionTextView"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="네트워크 연결을 확인해 주세요"
-                    android:textSize="16sp" />
-                <TextView
-                    android:id="@+id/errorDescriptionTextVieww"
-                    android:textColor="#4C4C4C"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="연결을 확인한 후 재시도를 클릭해주세요."
-                    android:textSize="14sp" />
-                <Button
-                    android:backgroundTint="#3F0099"
-                    android:layout_marginTop="20dp"
-                    android:id="@+id/btn_restart"
-                    android:textColor="@color/whitee"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="재시도"/>
 
-            </LinearLayout>
         </FrameLayout>
     </LinearLayout>
 </FrameLayout>

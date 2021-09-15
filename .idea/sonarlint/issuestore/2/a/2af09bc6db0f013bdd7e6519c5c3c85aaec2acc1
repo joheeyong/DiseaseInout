@@ -1,12 +1,12 @@
 
-{kotlin:S11920"\Define a constant instead of duplicating this literal "ì¹˜ë£Œ ( ì•½ë¬¼, ë¹„ì•½ë¬¼)" 4 times.(æ ¨…8ÇŞøœ½/
-€kotlin:S11920"aDefine a constant instead of duplicating this literal "ê°œìš” (ê²½ê³¼ ë° ë³‘íƒœìƒë¦¬)" 3 times.(æ ¨…8ÇŞøœ½/
 vkotlin:S3776*"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(ïÔÃ‰øÿÿÿÿ8ÇŞøœ½/
-xkotlin:S11925"TDefine a constant instead of duplicating this literal "ìƒí™œìŠµê´€ ê´€ë¦¬" 4 times.(—İªúÿÿÿÿ8•Â½/
-~kotlin:S11920"_Define a constant instead of duplicating this literal "í•©ë³‘ì¦, ìœ„í—˜ìš”ì¸ ì˜ˆë°©" 4 times.(æ ¨…8ÇŞøœ½/
-qkotlin:S11920"RDefine a constant instead of duplicating this literal "ì§„ë‹¨ ë° ê²€ì‚¬" 5 times.(æ ¨…8ÇŞøœ½/
+€kotlin:S11920"aDefine a constant instead of duplicating this literal "ê°œìš” (ê²½ê³¼ ë° ë³‘íƒœìƒë¦¬)" 3 times.(æ ¨…8ÇŞøœ½/
 skotlin:S11920"TDefine a constant instead of duplicating this literal "ìì£¼í•˜ëŠ” ì§ˆë¬¸" 5 times.(æ ¨…8ÇŞøœ½/
-wkotlin:S11920"XDefine a constant instead of duplicating this literal "ê°œìš” (ì •ì˜, ì›ì¸)" 7 times.(æ ¨…8ÇŞøœ½/
-|kotlin:S11925"XDefine a constant instead of duplicating this literal "ëŒ€ìƒë³„ ë§ì¶¤ ì •ë³´" 4 times.(—İªúÿÿÿÿ8•Â½/
-rkotlin:S3776¬"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(îÑæ†8• †½/
 tkotlin:S11920"UDefine a constant instead of duplicating this literal "ì—­í•™í†µê³„, ì¦ìƒ" 4 times.(æ ¨…8ÇŞøœ½/
+~kotlin:S11920"_Define a constant instead of duplicating this literal "í•©ë³‘ì¦, ìœ„í—˜ìš”ì¸ ì˜ˆë°©" 4 times.(æ ¨…8ÇŞøœ½/
+{kotlin:S11920"\Define a constant instead of duplicating this literal "ì¹˜ë£Œ ( ì•½ë¬¼, ë¹„ì•½ë¬¼)" 4 times.(æ ¨…8ÇŞøœ½/
+xkotlin:S11925"TDefine a constant instead of duplicating this literal "ìƒí™œìŠµê´€ ê´€ë¦¬" 4 times.(—İªúÿÿÿÿ8•Â½/
+|kotlin:S11925"XDefine a constant instead of duplicating this literal "ëŒ€ìƒë³„ ë§ì¶¤ ì •ë³´" 4 times.(—İªúÿÿÿÿ8•Â½/
+wkotlin:S11920"XDefine a constant instead of duplicating this literal "ê°œìš” (ì •ì˜, ì›ì¸)" 7 times.(æ ¨…8ÇŞøœ½/
+rkotlin:S3776¬"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(îÑæ†8• †½/
+qkotlin:S11920"RDefine a constant instead of duplicating this literal "ì§„ë‹¨ ë° ê²€ì‚¬" 5 times.(æ ¨…8ÇŞøœ½/

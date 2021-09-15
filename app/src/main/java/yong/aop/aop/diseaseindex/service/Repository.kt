@@ -6,42 +6,42 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import yong.aop.aop.diseaseindex.BuildConfig
-import yong.aop.aop.diseaseindex.Json.nice
-import yong.aop.aop.diseaseindex.Json2.MeasuredValue
+import yong.aop.aop.diseaseindex.Jsondis.DisInfo
+import yong.aop.aop.diseaseindex.Jsonair.AirInfo
 
 
 object Repository {
 
-    suspend fun ggetLatestAirQualityData(dissCd : Int, znCd: Int): nice? =
-        aairKoreaApiService
+    suspend fun ggetLatestAirQualityData(dissCd : Int, znCd: Int): DisInfo? =
+        AIR_KOREA_API_SERVICE
             .ggetRealtimeAirQualties(dissCd,znCd)
             .body()
             ?.response
             ?.body
-            ?.nices
+            ?.disInfos
             ?.firstOrNull()
 
-    private val aairKoreaApiService: AirKoreaApiService by lazy {
+    private val AIR_KOREA_API_SERVICE: ApiService by lazy {
         Retrofit.Builder()
-            .baseUrl(Url.AIR_KOREA_API_BASE_URL)
+            .baseUrl("http://apis.data.go.kr/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(buildHttpClient())
             .build()
             .create()
     }
 
-    suspend fun getLatestAirQualityData(stationName: String): MeasuredValue? =
-        airKoreaApiService
+    suspend fun getLatestAirQualityData(stationName: String): AirInfo? =
+        API_SERVICE
             .getRealtimeAirQualties(stationName)
             .body()
             ?.response
             ?.body
-            ?.measuredValues
+            ?.airInfos
             ?.firstOrNull()
 
-    private val airKoreaApiService: AirKoreaApiService by lazy {
+    private val API_SERVICE: ApiService by lazy {
         Retrofit.Builder()
-            .baseUrl(Url.AIR_KOREA_API_BASE_URL)
+            .baseUrl("http://apis.data.go.kr/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(buildHttpClient())
             .build()

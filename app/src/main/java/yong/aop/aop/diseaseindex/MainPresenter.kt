@@ -4,9 +4,10 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import yong.aop.aop.diseaseindex.Fragment.SaveFragment
 
 
-class MainPresenter(val mainView: AfterFragment) {
+class MainPresenter(val mainView: SaveFragment) {
     var view: Contract.View? = null
     var mainModel: MainModel? = null
 

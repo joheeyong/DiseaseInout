@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:padding="25dp"
         android:orientation="vertical">
-
         <TextView
             android:textColor="#5B58A5"
             android:textSize="15dp"
@@ -17,7 +16,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="해당 메일로 비밀번호 변경이 전송됩니다." />
-
         <EditText
             android:padding="10dp"
             android:background="@drawable/edge"
@@ -28,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="이메일을 입력하세요."
-            android:inputType="textPersonName"
-/>
+            android:inputType="textPersonName" />
+
     </LinearLayout>
 </LinearLayout>

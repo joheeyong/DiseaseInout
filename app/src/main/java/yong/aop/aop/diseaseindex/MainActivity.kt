@@ -7,6 +7,7 @@ import android.text.Html
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import yong.aop.aop.diseaseindex.Fragment.*
 
 class MainActivity : AppCompatActivity() {
     private  val auth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val chatListFragment = ChatListFragment()
         val myPageFragment = SettingsFragment()
         val beforeFragment = InfoFragment()
-        val afterFragment = AfterFragment()
+        val afterFragment = SaveFragment()
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 

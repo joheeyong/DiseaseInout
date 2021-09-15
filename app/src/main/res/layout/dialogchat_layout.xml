@@ -19,7 +19,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:textColor="@color/purple_200"
+        android:textColor="@color/purple"
         android:textStyle="bold"
         android:padding="5dp"
         android:textSize="13sp"
@@ -36,7 +36,7 @@
         android:text="5개의 질병별 채팅방이 준비되어 있습니다. 원하는 채팅방에서 주제에 벗어나지 않는 채팅을 해주세요."/>
 
     <TextView
-        android:textColor="@color/purple_200"
+        android:textColor="@color/purple"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:padding="5dp"

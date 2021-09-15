@@ -2,11 +2,9 @@ package yong.aop.aop.diseaseindex
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
+import yong.aop.aop.diseaseindex.Fragment.SettingsFragment
 
 
 class SettingsPresenter(val mainView: SettingsFragment) {

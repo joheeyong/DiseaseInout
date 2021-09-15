@@ -16,6 +16,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="해당 메일로 비밀번호 변경이 전송됩니다." />
-
     </LinearLayout>
+
 </LinearLayout>

@@ -16,6 +16,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="정말 로그아웃을 하시겠습니까?" />
-
     </LinearLayout>
+
 </LinearLayout>

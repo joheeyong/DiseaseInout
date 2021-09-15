@@ -58,7 +58,7 @@
             android:id="@+id/gbnj"
             android:layout_marginTop="10dp"
             android:padding="20dp"
-            android:background="@color/whitee"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -109,7 +109,7 @@
                     android:layout_marginRight="20dp"
                     android:id="@+id/tv_nickname"
                     android:gravity="right"
-                    android:textColor="@color/purple_200"
+                    android:textColor="@color/purple"
                     android:textSize="14sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/whitee"
+            android:background="@color/white"
             android:orientation="vertical"
             android:id="@+id/coldroom"
             android:layout_gravity="center"
@@ -214,7 +214,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/whitee"
+            android:background="@color/white"
             android:id="@+id/eyedis"
             android:layout_gravity="center"
             android:layout_width="match_parent"
@@ -280,7 +280,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/whitee"
+            android:background="@color/white"
             android:id="@+id/Foodpoi"
             android:layout_gravity="center"
             android:layout_width="match_parent"
@@ -352,7 +352,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:layout_constraintTop_toBottomOf="@+id/text"
-            android:background="@color/whitee">
+            android:background="@color/white">
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -418,7 +418,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:layout_constraintTop_toBottomOf="@+id/text"
-            android:background="@color/whitee">
+            android:background="@color/white">
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -531,7 +531,7 @@
             android:backgroundTint="#3F0099"
             android:layout_marginTop="20dp"
             android:id="@+id/btn_restart"
-            android:textColor="@color/whitee"
+            android:textColor="@color/white"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_width="wrap_content"

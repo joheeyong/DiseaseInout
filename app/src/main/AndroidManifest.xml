@@ -19,26 +19,25 @@
         android:theme="@style/Theme.DiseaseIndex"
         android:usesCleartextTraffic="true" >
 
-        <activity android:name=".LodingActivity" >
+        <activity android:name=".Activity.LodingActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmailEditActivity"/>
-        <activity android:name=".GoogleLoginActivity" />
-        <activity android:name=".ChatRoomActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".InfomationActivity" />
-        <activity android:name=".InfofluActivity" />
-        <activity android:name=".FullvideoActivity"
+        <activity android:name=".Activity.EmailEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.GoogleLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.ChatRoomActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Fragment.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.InfomationActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.InfofluActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.FullvideoActivity"
                   android:screenOrientation="landscape"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".CreateNoteActivity" />
-        <activity android:name=".NickEditActivity"/>
+        <activity android:name=".Activity.CreateNoteActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.NickEditActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

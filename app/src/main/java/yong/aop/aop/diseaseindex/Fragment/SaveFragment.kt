@@ -12,7 +12,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import yong.aop.aop.diseaseindex.*
+import yong.aop.aop.diseaseindex.Activity.CreateNoteActivity
+import yong.aop.aop.diseaseindex.Adapter.DissaveAdapter
+import yong.aop.aop.diseaseindex.Presenter.MainPresenter
 import yong.aop.aop.diseaseindex.databinding.FragmentSaveBinding
+import yong.aop.aop.diseaseindex.Services.NetworkStatus
 
 class SaveFragment : Fragment(R.layout.fragment_save) {
     private var binding: FragmentSaveBinding? = null

@@ -37,6 +37,17 @@
             android:textSize="15sp"
             android:layout_marginBottom="0dp"
             android:text="우려되거나 앓는 질병의 경과를 기록해보세요." />
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_marginTop="5dp"
+            android:gravity="top|center"
+            android:layout_gravity="center"
+            android:id="@+id/tv_test3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:text="저장된 정보는 다른 사용자가 볼 수 없습니다." />
 
     </LinearLayout>
     <LinearLayout

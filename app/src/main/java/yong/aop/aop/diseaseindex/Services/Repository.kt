@@ -20,7 +20,6 @@ object Repository {
             ?.body
             ?.disInfos
             ?.firstOrNull()
-
     private val AIR_KOREA_API_SERVICE: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl("http://apis.data.go.kr/")
@@ -38,7 +37,6 @@ object Repository {
             ?.body
             ?.airInfos
             ?.firstOrNull()
-
     private val API_SERVICE: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl("http://apis.data.go.kr/")

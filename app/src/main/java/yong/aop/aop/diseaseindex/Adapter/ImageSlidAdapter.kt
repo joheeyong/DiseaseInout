@@ -16,36 +16,30 @@ import androidx.viewpager.widget.ViewPager
 import com.balysv.materialripple.MaterialRippleLayout
 import com.bumptech.glide.Glide
 import yong.aop.aop.diseaseindex.Activity.InfofluActivity
-import yong.aop.aop.diseaseindex.Image
+import yong.aop.aop.diseaseindex.Model.Image
 import yong.aop.aop.diseaseindex.R
 
 
 class ImageSlidAdapter(private val act: Activity, var items: ArrayList<Image>) : PagerAdapter() {
     private var onItemClickListener: OnItemClickListener? = null
 
-    interface OnItemClickListener {
-        fun onItemClick(view: View?, obj: Image?)
-    }
+    interface OnItemClickListener { fun onItemClick(view: View?, obj: Image?) }
 
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener?) {
         this.onItemClickListener = onItemClickListener
     }
-
     override fun getCount(): Int {
         return items.size
     }
-
     fun setItems(items: List<Image>) {
         this.items.apply {
             clear()
             addAll(items)
         }
     }
-
     override fun isViewFromObject(view: View, obj: Any): Boolean {
         return view === obj
     }
-
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val obj: Image = items[position]
         val inflater = act.getSystemService(AppCompatActivity.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -53,7 +47,6 @@ class ImageSlidAdapter(private val act: Activity, var items: ArrayList<Image>) :
         val image = view.findViewById<View>(R.id.image) as ImageView
         val lytParent: MaterialRippleLayout = view.findViewById<View>(R.id.lyt_parent) as MaterialRippleLayout
         val myWebView: WebView = view.findViewById(R.id.webView)
-
         obj.image.let {
             Glide.with(act)
                 .load(it)
@@ -63,7 +56,6 @@ class ImageSlidAdapter(private val act: Activity, var items: ArrayList<Image>) :
             if (onItemClickListener != null) {
                 onItemClickListener!!.onItemClick(v, obj)
             }
-
             if(obj.name.toString().equals("https://health.kdca.go.kr")){
                 myWebView.loadUrl(obj.name.toString())
             } else if(obj.name.toString().equals("http://www.nhis.or.kr/nhis/healthin/retrieveMdcAdminSknsClinic.do")){
@@ -84,7 +76,6 @@ class ImageSlidAdapter(private val act: Activity, var items: ArrayList<Image>) :
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 ContextCompat.startActivity(container.rootView.context,intent,null)
             }
-
         }
         (container as ViewPager).addView(view)
         return view

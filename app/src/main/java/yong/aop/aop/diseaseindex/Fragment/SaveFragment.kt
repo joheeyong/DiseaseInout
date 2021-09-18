@@ -12,8 +12,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import yong.aop.aop.diseaseindex.*
-import yong.aop.aop.diseaseindex.Activity.CreateNoteActivity
+import yong.aop.aop.diseaseindex.Activity.CreateSaveActivity
 import yong.aop.aop.diseaseindex.Adapter.DissaveAdapter
+import yong.aop.aop.diseaseindex.Model.Dissave
 import yong.aop.aop.diseaseindex.Presenter.MainPresenter
 import yong.aop.aop.diseaseindex.databinding.FragmentSaveBinding
 import yong.aop.aop.diseaseindex.Services.NetworkStatus
@@ -62,7 +63,7 @@ class SaveFragment : Fragment(R.layout.fragment_save) {
     private fun createdis() {
         context?.let {
             if (auth.currentUser != null) {
-                val intent = Intent(it, CreateNoteActivity::class.java)
+                val intent = Intent(it, CreateSaveActivity::class.java)
                 startActivity(intent)
             } else {
                 view?.let { it1 -> Snackbar.make(it1, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show() }
@@ -130,13 +131,13 @@ class SaveFragment : Fragment(R.layout.fragment_save) {
 
     private fun selectedNote(note: Dissave) {
         context?.let {
-            val intent = Intent(it, CreateNoteActivity::class.java)
-            intent.putExtra(CreateNoteActivity.EXTRA_ID, note.id)
-            intent.putExtra(CreateNoteActivity.EXTRA_TITLE, note.title)
-            intent.putExtra(CreateNoteActivity.EXTRA_DESC, note.desc)
-            intent.putExtra(CreateNoteActivity.EXTRA_LEVEL2, note.level2)
-            intent.putExtra(CreateNoteActivity.EXTRA_LEVEL3, note.level3)
-            intent.putExtra(CreateNoteActivity.EXTRA_DATE, note.date)
+            val intent = Intent(it, CreateSaveActivity::class.java)
+            intent.putExtra(CreateSaveActivity.EXTRA_ID, note.id)
+            intent.putExtra(CreateSaveActivity.EXTRA_TITLE, note.title)
+            intent.putExtra(CreateSaveActivity.EXTRA_DESC, note.desc)
+            intent.putExtra(CreateSaveActivity.EXTRA_LEVEL2, note.level2)
+            intent.putExtra(CreateSaveActivity.EXTRA_LEVEL3, note.level3)
+            intent.putExtra(CreateSaveActivity.EXTRA_DATE, note.date)
             startActivity(intent)
         }
     }

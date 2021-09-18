@@ -36,7 +36,7 @@
         <activity android:name=".Activity.FullvideoActivity"
                   android:screenOrientation="landscape"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".Activity.CreateNoteActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.CreateSaveActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Activity.NickEditActivity" android:screenOrientation="portrait"/>
     </application>
 

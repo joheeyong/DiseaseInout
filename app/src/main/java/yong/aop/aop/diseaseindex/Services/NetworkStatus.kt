@@ -22,3 +22,5 @@ object NetworkStatus {
         return TYPE_NOT_CONNECTED
     }
 }
+
+

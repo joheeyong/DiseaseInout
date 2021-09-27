@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import yong.aop.aop.diseaseindex.*
@@ -27,7 +28,6 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
     private var binding: FragmentInfoBinding? = null
 
     private lateinit var infoPresenter: InfoPresenter
-//    private lateinit var database : DatabaseReference
     private var viewPager: ViewPager? = null
     private var imageSlidAdapter: ImageSlidAdapter? = null
     private var runnable: Runnable? = null
@@ -40,12 +40,6 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
         Image(R.drawable.poisonpic,"infopoison",""),
         Image(R.drawable.asthmapic,"infoasthma","")
     )
-
-//    var random = Random()
-//    var disarray= arrayOf("감기")
-//    var starray= arrayOf("개요","개요-경과 및 예후","개요-병태생리","개요-원인","개요-정의","역학 및 통계","위험요인 및 예방","자주하는 질문","증상","진단 및 검사","치료","치료-약물 치료","합병증")
-//    var i = random.nextInt(1)
-//    var j = random.nextInt(13)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -96,7 +90,7 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
                 startActivity(intent)
             }
         }else{
-                Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         }
     }
 
@@ -109,7 +103,7 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
             binding!!.llyBefore2.visibility= View.GONE
             binding!!.llyBefore3.visibility= View.GONE
             binding!!.llyBefore4.visibility= View.GONE
-            Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         } else{
             binding!!.llyOutnet.visibility= View.GONE
             binding!!.card.visibility= View.VISIBLE

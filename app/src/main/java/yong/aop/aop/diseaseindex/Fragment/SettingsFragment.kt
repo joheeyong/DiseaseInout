@@ -59,7 +59,6 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             checknet("로그아웃")
         }
 
-//        nameread()
         restart()
     }
 
@@ -82,7 +81,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
                 work
             } else {
-                Toast.makeText(context, "네트워크 연결을 확인해 주세요.", Toast.LENGTH_SHORT).show()
+                view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
             }
         }else{
             view?.let { it1 -> Snackbar.make(it1, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show() }
@@ -137,7 +136,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             binding!!.llyMytwo.visibility=View.GONE
             binding!!.llyMythree.visibility=View.GONE
             binding!!.llyOutnet.visibility=View.VISIBLE
-            Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         } else{
             binding!!.llyOutnet.visibility=View.GONE
             binding!!.llyMyone.visibility=View.VISIBLE
@@ -164,10 +163,9 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                 auth.sendPasswordResetEmail(auth.currentUser!!.email.toString())
                     .addOnCompleteListener(){
                         if(it.isSuccessful){
-                            Toast.makeText(context, "메일이 전송되었습니다.", Toast.LENGTH_SHORT).show()
-
+                            view?.let { it1 -> Snackbar.make(it1, "메일이 전송되었습니다", Snackbar.LENGTH_LONG).show() }
                         } else{
-                            Toast.makeText(context, "다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                            view?.let { it1 -> Snackbar.make(it1, "다시 시도해주세요", Snackbar.LENGTH_LONG).show() }
                         }
                     }
             }

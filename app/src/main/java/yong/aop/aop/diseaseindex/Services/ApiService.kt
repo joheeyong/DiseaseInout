@@ -13,7 +13,7 @@ interface ApiService {
             "&numOfRows=1" +
             "&pageNo=1"+
             "&type=json")
-    suspend fun ggetRealtimeAirQualties(
+    suspend fun getDisease(
         @Query("dissCd") dissCd: Int,
         @Query("znCd") znCd: Int,
     ): Response<DiseaseResponse>
@@ -23,7 +23,7 @@ interface ApiService {
             "&returnType=json" +
             "&dataTerm=DAILY" +
             "&ver=1.3")
-    suspend fun getRealtimeAirQualties(
+    suspend fun getAir(
         @Query("stationName") stationName: String
     ): Response<AirQualityResponse>
 }

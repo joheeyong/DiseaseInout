@@ -21,30 +21,30 @@ class ChatItemAdapter : ListAdapter<Chat, ChatItemAdapter.ViewHolder>(diffUtil) 
         fun bind(chat: Chat) {
             val auth = Firebase.auth
             val set = ConstraintSet()
-            val idTextView = binding.idTextViewww.id
-            val messageTextView = binding.messageTextView.id
-            val layout = binding.messageLayout
+            val idTextView = binding.tvId.id
+            val messageTextView = binding.tvMessage.id
+            val layout = binding.conLayout
             if (chat.senderId == auth.currentUser?.uid) {
-                binding.idTextViewaaa.text= chat.date
-                binding.idTextViewaaaa.text= chat.date
-                binding.idTextViewww.text = chat.name
+                binding.tvTime1.text= chat.date
+                binding.tvTime2.text= chat.date
+                binding.tvId.text = chat.name
                 database = FirebaseDatabase.getInstance().getReference("Users")
                 database.child(auth.currentUser!!.uid).get().addOnSuccessListener {
                     if (it.exists()) {
                         if(it.child("name").value.toString()!="null") {
-                            binding.idTextViewww.text=it.child("name").value.toString()
+                            binding.tvId.text=it.child("name").value.toString()
                         }
                     }
                 }.addOnFailureListener{
                 }
-                binding.messageTextView.text = chat.message
-                binding.messageTextView.setBackgroundResource(R.drawable.widhet_background2)
+                binding.tvMessage.text = chat.message
+                binding.tvMessage.setBackgroundResource(R.drawable.widhet_background2)
             } else {
-                binding.idTextViewaaa.text= chat.date
-                binding.idTextViewaaaa.text= chat.date
-                binding.idTextViewww.text = chat.name
-                binding.messageTextView.text = chat.message
-                binding.messageTextView.setBackgroundResource(R.drawable.widget_background)
+                binding.tvTime1.text= chat.date
+                binding.tvTime2.text= chat.date
+                binding.tvId.text = chat.name
+                binding.tvMessage.text = chat.message
+                binding.tvMessage.setBackgroundResource(R.drawable.widget_background)
             }
             set.clone(layout)
             if (chat.senderId == auth.currentUser?.uid) {

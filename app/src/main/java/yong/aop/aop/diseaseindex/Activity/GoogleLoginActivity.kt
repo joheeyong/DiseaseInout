@@ -28,7 +28,6 @@ import java.util.*
 class GoogleLoginActivity : AppCompatActivity(),View.OnClickListener {
     var binding: ActivityGoogleloginBinding? = null
 
-    private lateinit var GooglePresenter: GooglePresenter
     private lateinit var auth: FirebaseAuth
     private lateinit var googlesignclient: GoogleSignInClient
     private val RC_SIGN_IN = 99

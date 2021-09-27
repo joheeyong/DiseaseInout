@@ -74,7 +74,7 @@ class ImageSlidAdapter(private val act: Activity, var items: ArrayList<Image>) :
                 val intent = Intent(container.rootView?.context, InfofluActivity::class.java)
                 intent.putExtra("Key", "천식")
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                ContextCompat.startActivity(container.rootView.context,intent,null)
+                startActivity(container.rootView.context,intent,null)
             }
         }
         (container as ViewPager).addView(view)

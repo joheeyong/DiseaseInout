@@ -13,3 +13,5 @@ data class Dissave(
     val date: String? = null,
     val sellerId : String? = null,
 ) : Parcelable
+
+

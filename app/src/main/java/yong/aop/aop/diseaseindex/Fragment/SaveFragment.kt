@@ -56,7 +56,7 @@ class SaveFragment : Fragment(R.layout.fragment_save) {
         if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
                 work
         }else{
-            Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         }
     }
 
@@ -90,7 +90,7 @@ class SaveFragment : Fragment(R.layout.fragment_save) {
             binding!!.rvNote.visibility=View.GONE
             binding!!.addFloatingButton.visibility=View.GONE
             binding!!.llyOutnet.visibility=View.VISIBLE
-            Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         } else{
             binding!!.llyOutnet.visibility=View.GONE
             binding!!.llyToptext.visibility=View.VISIBLE
@@ -123,7 +123,7 @@ class SaveFragment : Fragment(R.layout.fragment_save) {
                     }
                 builder.show()
                 }else{
-                    Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+                    view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
                 }
             }
         })

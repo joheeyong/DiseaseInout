@@ -12,15 +12,15 @@ import yong.aop.aop.diseaseindex.Jsonair.AirInfo
 
 object Repository {
 
-    suspend fun ggetLatestAirQualityData(dissCd : Int, znCd: Int): DisInfo? =
-        AIR_KOREA_API_SERVICE
-            .ggetRealtimeAirQualties(dissCd,znCd)
+    suspend fun getDisease(dissCd : Int, znCd: Int): DisInfo? =
+        API_SERVICES
+            .getDisease(dissCd,znCd)
             .body()
             ?.response
             ?.body
             ?.disInfos
             ?.firstOrNull()
-    private val AIR_KOREA_API_SERVICE: ApiService by lazy {
+    private val API_SERVICES: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl("http://apis.data.go.kr/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -29,9 +29,9 @@ object Repository {
             .create()
     }
 
-    suspend fun getLatestAirQualityData(stationName: String): AirInfo? =
+    suspend fun getAir(stationName: String): AirInfo? =
         API_SERVICE
-            .getRealtimeAirQualties(stationName)
+            .getAir(stationName)
             .body()
             ?.response
             ?.body

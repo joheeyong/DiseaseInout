@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:gravity="center"
-            android:text="DisAssi에 오신 걸 환영합니다"/>
+            android:text="DisManager에 오신 걸 환영합니다"/>
         <TextView
             android:textColor="@color/white"
             android:layout_marginTop="10dp"

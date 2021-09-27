@@ -24,8 +24,7 @@ class ChatRoomActivity : AppCompatActivity() {
     var binding: ActivityChatroomBinding? = null
 
     private lateinit var chatPresenter: ChatPresenter
-    private lateinit var database : DatabaseReference
-    private var chatDB: DatabaseReference? = null
+    private var database: DatabaseReference? = null
     private val auth: FirebaseAuth by lazy { Firebase.auth }
 
     var firstname: String = ""
@@ -39,39 +38,37 @@ class ChatRoomActivity : AppCompatActivity() {
         getSupportActionBar()?.setTitle(Html.fromHtml("<b>"+intent.getStringExtra("chatKey")+"채팅방"))
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
 
-
         val chatKey = intent.getStringExtra("chatKey")
-        val emailEditText = binding!!.messageEditText
-        val sendButton = binding!!.sendButton
-        chatDB = Firebase.database.reference.child("Chats").child("$chatKey")
-//        readData()
+        val etMessage = binding!!.etMessage
+        val btnSend = binding!!.btnSend
+        database = Firebase.database.reference.child("Chats").child("$chatKey")
         scroll()
         chatPresenter = ChatPresenter(this)
         chatPresenter.get(chatKey)
         chatrecycler()
 
-        emailEditText?.addTextChangedListener {
-            val enable = emailEditText.text.isNotEmpty()
-            sendButton.isEnabled = enable
+        etMessage?.addTextChangedListener {
+            val enable = etMessage.text.isNotEmpty()
+            btnSend.isEnabled = enable
         }
     }
 
     private fun chatrecycler() {
         binding!!.chatRecyclerView.adapter = adapter
         binding!!.chatRecyclerView.layoutManager = LinearLayoutManager(this)
-        binding!!.sendButton.setOnClickListener {
+        binding!!.btnSend.setOnClickListener {
             val simpleDateFormat = SimpleDateFormat("hh:mm")
             val date = simpleDateFormat.format(Date())
             val chatItem = auth.currentUser?.let { it1 ->
                 Chat(
                     senderId = it1.uid,
-                    message = binding!!.messageEditText.text.toString(),
+                    message = binding!!.etMessage.text.toString(),
                     name = firstname,
                     date = date
                 )
             }
-            chatDB?.push()?.setValue(chatItem)
-            binding!!.messageEditText.text = null
+            database?.push()?.setValue(chatItem)
+            binding!!.etMessage.text = null
             scroll()
         }
     }

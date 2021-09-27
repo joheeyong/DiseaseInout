@@ -1,22 +1,13 @@
 package yong.aop.aop.diseaseindex.Fragment
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.pm.PackageManager
 import android.content.res.ColorStateList
-import android.location.Address
-import android.location.Geocoder
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationRequest
-import com.google.android.gms.location.LocationServices
-import com.google.android.gms.tasks.CancellationTokenSource
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import yong.aop.aop.diseaseindex.Jsondis.Gradee
@@ -32,8 +23,8 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
     private var binding: FragmentDissearchBinding? = null
 
     private val scope = MainScope()
-    private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
-    private var cancellationTokenSource: CancellationTokenSource? = null
+//    private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+//    private var cancellationTokenSource: CancellationTokenSource? = null
 
     var lat: Double? = null
     var lng: Double? = null
@@ -42,7 +33,7 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
     var name: String? =null
     var znCd: Int=0
     var dissCd: Int=1
-    var list: List<Address>? = null
+//    var list: List<Address>? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -63,13 +54,14 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
                 .show()
         }
         binding!!.btnAll.setOnClickListener {
-            restart()
-            val status = context?.let { NetworkStatus.getConnectivityStatus(it) }
-            if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
-                initVariables()
-                requestLocationPermissions()
-                gpsinfo()
-            }
+            view?.let { it1 -> Snackbar.make(it1, "현재 버전에 사용이 되지 않습니다", Snackbar.LENGTH_LONG).show() }
+//            restart()
+//            val status = context?.let { NetworkStatus.getConnectivityStatus(it) }
+//            if (status == NetworkStatus.TYPE_MOBILE || status == NetworkStatus.TYPE_WIFI) {
+//                initVariables()
+//                requestLocationPermissions()
+//                gpsinfo()
+//            }
         }
         binding!!.llyArea.setOnClickListener { selectarea() }
         binding!!.llySick.setOnClickListener { selectsick() }
@@ -85,7 +77,7 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
     private fun restart() {
         val status = context?.let { NetworkStatus.getConnectivityStatus(it) }
         if (status != NetworkStatus.TYPE_MOBILE && status != NetworkStatus.TYPE_WIFI) {
-            Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         }
     }
 
@@ -130,59 +122,59 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
 
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) { super.onRequestPermissionsResult(requestCode, permissions, grantResults) }
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<out String>,
+//        grantResults: IntArray
+//    ) { super.onRequestPermissionsResult(requestCode, permissions, grantResults) }
 
-    private fun initVariables() {
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(activity)
-    }
+//    private fun initVariables() {
+//        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(activity)
+//    }
 
-    private fun requestLocationPermissions() {
-        requestPermissions(
-            arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,
-                    Manifest.permission.ACCESS_FINE_LOCATION),
-                    REQUEST_BACKGROUND_ACCESS_LOCATION_PERMISSIONS
-        )
-    }
+//    private fun requestLocationPermissions() {
+//        requestPermissions(
+//            arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,
+//                    Manifest.permission.ACCESS_FINE_LOCATION),
+//                    REQUEST_BACKGROUND_ACCESS_LOCATION_PERMISSIONS
+//        )
+//    }
 
-    private fun selectgps() {
-        cancellationTokenSource = CancellationTokenSource()
-        if (context?.let {
-                ActivityCompat.checkSelfPermission(it, Manifest.permission.ACCESS_FINE_LOCATION)
-            } != PackageManager.PERMISSION_GRANTED && context?.let {
-                ActivityCompat.checkSelfPermission(it, Manifest.permission.ACCESS_COARSE_LOCATION)
-            } != PackageManager.PERMISSION_GRANTED)
-            {
-                return }
-        fusedLocationProviderClient
-            .getCurrentLocation(
-                LocationRequest.PRIORITY_HIGH_ACCURACY,
-                cancellationTokenSource!!.token
-            ).addOnSuccessListener { location ->
-                val geocoder = Geocoder(context)
-                lat = location.latitude
-                lng = location.longitude
-                list = geocoder.getFromLocation(lat!!, lng!!, 10)
-                etArea = (list as MutableList<Address>?)?.get(0)?.adminArea.toString()
-                binding!!.etArea.text = etArea
-                binding!!.tvInfodis.text =
-                "" + binding!!.etArea.text + "의 " + binding!!.etSick.text + " 예측지수 "
-        }
-    }
+//    private fun selectgps() {
+//        cancellationTokenSource = CancellationTokenSource()
+//        if (context?.let {
+//                ActivityCompat.checkSelfPermission(it, Manifest.permission.ACCESS_FINE_LOCATION)
+//            } != PackageManager.PERMISSION_GRANTED && context?.let {
+//                ActivityCompat.checkSelfPermission(it, Manifest.permission.ACCESS_COARSE_LOCATION)
+//            } != PackageManager.PERMISSION_GRANTED)
+//            {
+//                return }
+//        fusedLocationProviderClient
+//            .getCurrentLocation(
+//                LocationRequest.PRIORITY_HIGH_ACCURACY,
+//                cancellationTokenSource!!.token
+//            ).addOnSuccessListener { location ->
+//                val geocoder = Geocoder(context)
+//                lat = location.latitude
+//                lng = location.longitude
+//                list = geocoder.getFromLocation(lat!!, lng!!, 10)
+//                etArea = (list as MutableList<Address>?)?.get(0)?.adminArea.toString()
+//                binding!!.etArea.text = etArea
+//                binding!!.tvInfodis.text =
+//                "" + binding!!.etArea.text + "의 " + binding!!.etSick.text + " 예측지수 "
+//        }
+//    }
 
     private fun textsave() {
         etArea = binding!!.etArea.text.toString()
         disst = binding!!.etSick.text.toString()
     }
 
-    @SuppressLint("MissingPermission")
-    private fun gpsinfo() {
-        selectgps()
-        work()
-    }
+//    @SuppressLint("MissingPermission")
+//    private fun gpsinfo() {
+//        selectgps()
+//        work()
+//    }
 
     @SuppressLint("MissingPermission")
     private fun searchinfo() {
@@ -258,16 +250,16 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
         scope.launch {
             try {
                 val mmeasuredValue =
-                    Repository.ggetLatestAirQualityData(dissCd,znCd)
+                    Repository.getDisease(dissCd,znCd)
                 val measuredValue =
-                    Repository.getLatestAirQualityData(name!!)
+                    Repository.getAir(name!!)
                 binding!!.q2.text="측정소는 "+ name + "이며, " +binding!!.etArea.text.toString()+"입니다."
                 displayAirQualityData(mmeasuredValue!!, measuredValue!!)
                 binding!!.progressBar.visibility = View.GONE
             } catch (exception: Exception) {
                 exception.printStackTrace()
                 binding!!.progressBar.visibility = View.VISIBLE
-                Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+                view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
             } finally {
             }
         }
@@ -324,9 +316,9 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
         }
     }
 
-    companion object {
-        const val REQUEST_BACKGROUND_ACCESS_LOCATION_PERMISSIONS = 101
-    }
+//    companion object {
+//        const val REQUEST_BACKGROUND_ACCESS_LOCATION_PERMISSIONS = 101
+//    }
 }
 
 

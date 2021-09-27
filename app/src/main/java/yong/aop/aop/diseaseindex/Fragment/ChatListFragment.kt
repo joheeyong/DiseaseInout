@@ -23,7 +23,6 @@ import yong.aop.aop.diseaseindex.Activity.ChatRoomActivity
 import yong.aop.aop.diseaseindex.Activity.NickEditActivity
 import yong.aop.aop.diseaseindex.Adapter.ImageSlidAdapter
 import yong.aop.aop.diseaseindex.Model.Image
-import yong.aop.aop.diseaseindex.Presenter.SettingsPresenter
 import yong.aop.aop.diseaseindex.databinding.FragmentChatlistBinding
 import yong.aop.aop.diseaseindex.Services.NetworkStatus
 
@@ -46,7 +45,6 @@ class ChatListFragment : Fragment(R.layout.fragment_chatlist) {
 
     val SUBACTIITY_REQUEST_CODE = 100
     var name: String? =null
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -100,7 +98,7 @@ class ChatListFragment : Fragment(R.layout.fragment_chatlist) {
                 intent.putExtra("Key", "닉네임")
                 startActivityForResult(intent, SUBACTIITY_REQUEST_CODE)
             } else {
-                Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+                view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
             }
         }else{
             view?.let { it1 -> Snackbar.make(it1, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show() }
@@ -113,7 +111,7 @@ class ChatListFragment : Fragment(R.layout.fragment_chatlist) {
             binding!!.chatListRecyclerView.visibility=View.GONE
             binding!!.card.visibility=View.GONE
             binding!!.llyOutnet.visibility=View.VISIBLE
-            Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+            view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
         } else{
             binding!!.llyOutnet.visibility=View.GONE
             binding!!.card.visibility=View.VISIBLE
@@ -132,7 +130,7 @@ class ChatListFragment : Fragment(R.layout.fragment_chatlist) {
                     startActivity(intent)
                 }
             } else {
-                Toast.makeText(context, "네트워크 연결이 끊겼습니다.", Toast.LENGTH_SHORT).show()
+                view?.let { it1 -> Snackbar.make(it1, "네트워크 연결이 끊겼습니다", Snackbar.LENGTH_LONG).show() }
             }
         }else{
             view?.let { it1 -> Snackbar.make(it1, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show() }

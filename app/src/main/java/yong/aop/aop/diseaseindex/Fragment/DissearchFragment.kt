@@ -254,7 +254,7 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
                 val measuredValue =
                     Repository.getAir(name!!)
                 binding!!.q2.text="측정소는 "+ name + "이며, " +binding!!.etArea.text.toString()+"입니다."
-                displayAirQualityData(mmeasuredValue!!, measuredValue!!)
+                QualityData(mmeasuredValue!!, measuredValue!!)
                 binding!!.progressBar.visibility = View.GONE
             } catch (exception: Exception) {
                 exception.printStackTrace()
@@ -266,7 +266,7 @@ class DissearchFragment : Fragment(R.layout.fragment_dissearch){
     }
 
     @SuppressLint("SetTextI18n")
-    fun displayAirQualityData(DisInfo: DisInfo, airInfo: AirInfo) {
+    fun QualityData(DisInfo: DisInfo, airInfo: AirInfo) {
         binding!!.contentsLayout.animate()
             .alpha(1F)
             .start()
